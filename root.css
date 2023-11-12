@@ -1,0 +1,13 @@
+:root{
+    scroll-behavior: smooth;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --color-header: rgb(114, 0, 25);
+    --texto-header: #f2f2f2;
+    --color-nav: rgb(196, 196, 196);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

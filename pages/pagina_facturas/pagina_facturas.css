@@ -1,0 +1,87 @@
+.header{
+    background: var(--color-header);
+    color: #f2f2f2;
+    padding: 20px 0;
+}
+
+.header h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.nav{
+    background: var(--color-nav);
+    padding: 5px 30px;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav ul li{
+    cursor: pointer;
+}
+
+.nav ul li:hover{
+    color: rgb(51, 51, 51);
+}
+
+.nav ul li i{
+    font-size: 0.7rem;
+}
+
+
+.menu-desplegable-ventas{
+    opacity: 0;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 150px;
+    padding: 5px 15px;
+    box-shadow: 0 0 5px;
+    background: var(--color-nav);
+}
+
+.menu-desplegable-ventas ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.menu-desplegable-ventas ul li{
+    cursor: pointer;
+}
+
+.menu-desplegable-ventas ul li:hover{
+    color: rgb(51, 51, 51);
+}
+
+.menu-desplegable-inventario{
+    opacity: 0;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 160px;
+    padding: 5px 15px;
+    box-shadow: 0 0 5px;
+    background: var(--color-nav);
+}
+
+.menu-desplegable-inventario ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.menu-desplegable-inventario ul li{
+    cursor: pointer;
+}
+
+.menu-desplegable-inventario ul li:hover{
+    color: rgb(51, 51, 51);
+}
+
