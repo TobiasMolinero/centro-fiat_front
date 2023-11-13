@@ -6,30 +6,62 @@ const menuDesplegableInventario = document.querySelector('.menu-desplegable-inve
 let menuDesplegadoVentas = false;
 let menuDesplegadoInventario = false;
 
-itemDesplegableVentas.addEventListener('click', () => {
+window.addEventListener('click', () => {
+    if(menuDesplegadoInventario === true || menuDesplegadoVentas === true){
+        cerrarMenuInventario();
+        cerrarMenuVentas();
+    }
+})
+
+itemDesplegableVentas.addEventListener('click', (e) => {
+    e.stopPropagation();
     if(menuDesplegadoVentas){
-        menuDesplegableVentas.style.opacity = 0;
-        menuDesplegableVentas.style.top = 0;
-        menuDesplegableVentas.style.left = 0;
-        menuDesplegadoVentas = false;
+        cerrarMenuVentas();
     } else {
-        menuDesplegableVentas.style.opacity = 1;
-        menuDesplegableVentas.style.top = '155px';
-        menuDesplegableVentas.style.left = '85px';
-        menuDesplegadoVentas = true;
+        if(menuDesplegadoInventario){
+            cerrarMenuInventario();
+        }
+        desplegarMenuVentas();
     }
 });
 
-itemDesplegableInventario.addEventListener('click', () => {
+itemDesplegableInventario.addEventListener('click', (e) => {
+    e.stopPropagation()
     if(menuDesplegadoInventario){
-        menuDesplegableInventario.style.opacity = 0;
-        menuDesplegableInventario.style.top = 0;
-        menuDesplegableInventario.style.left = 0;
-        menuDesplegadoInventario = false;
+        cerrarMenuInventario();
     } else {
-        menuDesplegableInventario.style.opacity = 1;
-        menuDesplegableInventario.style.top = '155px';
-        menuDesplegableInventario.style.left = '160px';
-        menuDesplegadoInventario = true;
+        if(menuDesplegadoVentas){
+            cerrarMenuVentas();
+        }
+        desplegarMenuInventario();
     }
 });
+
+
+const desplegarMenuVentas = () => {
+    menuDesplegableVentas.style.opacity = 1;
+    menuDesplegableVentas.style.top = '5px';
+    menuDesplegableVentas.style.left = '85px';
+    menuDesplegadoVentas = true;
+};
+
+const cerrarMenuVentas = () => {
+    menuDesplegableVentas.style.opacity = 0;
+    menuDesplegableVentas.style.top = '-500px';
+    menuDesplegableVentas.style.left = '-500px';
+    menuDesplegadoVentas = false;
+}
+
+const desplegarMenuInventario = () => {
+    menuDesplegableInventario.style.opacity = 1;
+    menuDesplegableInventario.style.top = '-55px';
+    menuDesplegableInventario.style.left = '160px';
+    menuDesplegadoInventario = true;
+};
+
+const cerrarMenuInventario = () => {
+    menuDesplegableInventario.style.opacity = 0;
+    menuDesplegableInventario.style.top = '-500px';
+    menuDesplegableInventario.style.left = '-500px';
+    menuDesplegadoInventario = false;
+}

@@ -2,12 +2,12 @@
     background: var(--color-header);
     color: #f2f2f2;
     padding: 20px 0;
+    display: flex;
+    align-items: center;
 }
 
-.header h2{
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
+.header img{
+    width: 500px;
 }
 
 .nav{
@@ -34,10 +34,9 @@
     font-size: 0.7rem;
 }
 
-
 .menu-desplegable-ventas{
     opacity: 0;
-    position: absolute;
+    position: relative;
     top: -10px;
     left: -10px;
     width: 150px;
@@ -62,7 +61,7 @@
 
 .menu-desplegable-inventario{
     opacity: 0;
-    position: absolute;
+    position: relative;
     top: -10px;
     left: -10px;
     width: 160px;
