@@ -55,7 +55,7 @@ const cerrarMenuVentas = () => {
 const desplegarMenuInventario = () => {
     menuDesplegableInventario.style.opacity = 1;
     menuDesplegableInventario.style.top = '5px';
-    menuDesplegableInventario.style.left = '10px';
+    menuDesplegableInventario.style.left = '-10px';
     menuDesplegadoInventario = true;
 };
 
