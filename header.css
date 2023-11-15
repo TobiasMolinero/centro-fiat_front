@@ -34,6 +34,15 @@
     font-size: 0.7rem;
 }
 
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav ul li a:hover{
+    color: rgb(51, 51, 51);
+}
+
 .menu-desplegable-inventario{
     opacity: 0;
     position: relative;
@@ -55,7 +64,12 @@
     cursor: pointer;
 }
 
-.menu-desplegable-inventario ul li:hover{
+.menu-desplegable-inventario ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-desplegable-inventario ul li a:hover{
     color: rgb(51, 51, 51);
 }
 

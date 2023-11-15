@@ -23,7 +23,7 @@ itemDesplegableInventario.addEventListener("click", (e) => {
 const desplegarMenuInventario = () => {
   menuDesplegableInventario.style.opacity = 1;
   menuDesplegableInventario.style.top = "5px";
-  menuDesplegableInventario.style.left = "150px";
+  menuDesplegableInventario.style.left = "100px";
   menuDesplegadoInventario = true;
 };
 
