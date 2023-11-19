@@ -6,16 +6,24 @@
     <title>CENTRO FIAT</title>
     <!-- ROOT CSS -->
     <link rel="stylesheet" href="../../../root.css">
-
-    <!-- CSS HEADER -->
+    
+    <!-- BOOTSTRAP-ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="../../../bootstrap-icons-1.11.1">
+    
+    <!-- CSS HEADER -->
     <link rel="stylesheet" href="../../../header.css">
 
     <!-- CSS PAGINA -->
-    <link rel="stylesheet" href="pagina_facturas.css">
+    <link rel="stylesheet" href="./ing_sal.css">
 
-    <!-- SCRIPT HEADER -->
+
+    <!-- SCRIPTS -->
     <script src="../../../header.js" defer></script>
+    <script src="./ing_sal.js" defer></script>
+
+    <!-- AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -30,12 +38,74 @@
     <div class="menu-desplegable-inventario">
         <ul>
             <li><a href="">Ingresos/Salidas Mercaderia</a></li>
-            <li><a href="">Lista de Stock</a></li>
+            <li><a href="">Lista de Productos</a></li>
         </ul>
     </div>
-    
-    <section class="container">
+    <div class="container">
+        <h2>Ingresos/Salidas de Mercaderia</h2>
+        <div class="opciones">
+            <h3 id="botonIngresos">Ingresos</h3>
+            <h3 id="botonSalidas">Salidas</h3>
+        </div>
+        <hr>
+        <div class="container-grid">
+            <div class="table">
+                <table>
+                    <thead id="thead">
+                        <th>Fecha</th>
+                        <th>Cod. Producto</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
 
-    </section>
+
+
+            <div id="formIngreso" class="form">
+                <button id="btnNuevoIngreso" class="btn"><i class="bi bi-plus-circle-fill"></i>Registrar Ingreso</button>
+                <form id="formularioIngresos">
+                    <div>
+                        <label for="txtFechaIngreso">Fecha:</label>
+                        <input type="date" id="txtFechaIngreso" required>
+                    </div>
+                    <select id="cboProductoIngreso"></select>
+                    <div>
+                        <label for="txtCantidadIngreso">Cantidad: </label>
+                        <input type="number" min="1" id="txtCantidadIngreso" required>
+                    </div>
+                    <div class="botones-form">
+                        <button type="button" id="btnCancelarIngreso">Cancelar</button>
+                        <button type="button"  id="btnGuardarIngreso">Guardar</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+            <div id="formSalida" class="form" hidden>
+                <button id="btnNuevaSalida" class="btn"><i class="bi bi-plus-circle-fill"></i>Registrar Salida</button>
+                <form id="formularioSalida">
+                    <div>
+                        <label for="txtFechaSalida">Fecha:</label>
+                        <input type="date" id="txtFechaSalida">
+                    </div>
+                    <select id="cboProductoSalida"></select>
+                    <div>
+                        <label for="txtCantidadSalida">Cantidad: </label>
+                        <input type="number" min="1" id="txtCantidadSalida">
+                    </div>
+                    <div class="botones-form">
+                        <button type="button" id="btnCancelarSalida">Cancelar</button>
+                        <button type="button" id="btnGuardarSalida">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

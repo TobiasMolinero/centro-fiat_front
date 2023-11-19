@@ -1,0 +1,125 @@
+
+
+.container h2{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.opciones{
+    margin: 0 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.opciones h3{
+    background: var(--color-nav);
+    padding: 5px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.container hr{
+    margin: 0 200px;
+    border: 1px solid black;
+}
+
+.container-grid{
+    margin: 0 200px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.container-grid .table{
+    margin: 20px 0 0 0;
+}
+
+.container-grid .table table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.container-grid .table table thead{
+    border-bottom: 2px solid black;
+    transition: 0.3s;
+}
+
+.container-grid .table table th{
+    padding: 5px 5px;
+}
+
+.container-grid .table table tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.container-grid .table table tbody td{
+    padding: 10px 5px;
+}
+
+#editSalida, #deleteSalida,
+#editIngreso, #deleteIngreso{
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.container-grid .form{
+    margin: 20px 0 0 15px;
+}
+
+.container-grid .form .btn{
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.container-grid .form .btn i{
+    margin-right: 5px;
+} 
+
+.container-grid .form form{
+    background: rgba(128, 128, 128, 0.274);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container-grid .form form input,
+.container-grid .form form select{
+    padding: 5px;
+}
+
+.container-grid .form form input[type='number']{
+    width: 50px;
+    text-align: center;
+}
+
+.form .botones-form{
+    margin-top: 10px;
+}
+
+.form .botones-form button{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#btnGuardarIngreso{
+    background: green;
+    color: white;
+}
+
+#btnGuardarIngreso:hover{
+    background: rgb(0, 85, 0);
+}
+
+#btnGuardarSalida{
+    background: green;
+    color: white;
+}
+
+#btnGuardarSalida:hover{
+    background: rgb(0, 85, 0);
+}

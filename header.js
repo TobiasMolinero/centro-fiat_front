@@ -1,13 +1,11 @@
 const itemDesplegableInventario = document.querySelector("#item-desplegable-inventario");
-
 const menuDesplegableInventario = document.querySelector(".menu-desplegable-inventario");
 
 let menuDesplegadoInventario = false;
 
 window.addEventListener("click", () => {
-  if (menuDesplegadoInventario === true || menuDesplegadoVentas === true) {
+  if (menuDesplegadoInventario === true) {
     cerrarMenuInventario();
-    cerrarMenuVentas();
   }
 });
 
@@ -22,7 +20,7 @@ itemDesplegableInventario.addEventListener("click", (e) => {
 
 const desplegarMenuInventario = () => {
   menuDesplegableInventario.style.opacity = 1;
-  menuDesplegableInventario.style.top = "5px";
+  menuDesplegableInventario.style.top = "155px";
   menuDesplegableInventario.style.left = "100px";
   menuDesplegadoInventario = true;
 };
