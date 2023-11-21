@@ -145,12 +145,12 @@ const getIngresos = async() => {
         response.data.forEach(ing => {
             tbody.innerHTML += `
                 <tr>
-                    <td>${ing.fecha.substring(0,9)}</td>
+                    <td>${ing.fecha.substring(0,10)}</td>
                     <td>${ing.cod_producto}</td>
                     <td>${ing.descripcion}</td>
                     <td>${ing.cantidad}</td>
                     <td>
-                        <button id="deleteIngreso" onclick="eliminarIngreso(${ing.id_ingreso})"><i class="bi bi-trash"></i></button>
+                        <button id="deleteIngreso" onclick="eliminarIngreso(${ing.id_ingreso}, '${ing.cod_producto}', ${ing.cantidad})"><i class="bi bi-trash"></i></button>
                     </td>
                 </tr>
             `
@@ -162,9 +162,15 @@ const getIngresos = async() => {
     }
 };
 
-const eliminarIngreso = async(id) => {
+const eliminarIngreso = async(id, cod_producto, cantidad) => {
+    console.log(cod_producto)
+    console.log(cantidad)
     try {
-        await axios.delete('http://localhost:3000/ingresos/delete/' + id)
+        res = await axios.post('http://localhost:3000/ingresos/delete/' + id, {
+            cod_producto: cod_producto,
+            cantidad: cantidad
+        })
+        alert(res.data)
         getIngresos()
     } catch (error) {
         alert(error)
@@ -178,12 +184,12 @@ const getSalidas = async() => {
         response.data.forEach(sal => {
             tbody.innerHTML += `
                 <tr>
-                    <td>${sal.fecha.substring(0,9)}</td>
+                    <td>${sal.fecha.substring(0,10)}</td>
                     <td>${sal.cod_producto}</td>
                     <td>${sal.descripcion}</td>
                     <td>${sal.cantidad}</td>
                     <td>
-                        <button id="deleteSalida" onclick="eliminarSalida(${sal.id_salida})"><i class="bi bi-trash"></i></button>
+                        <button id="deleteSalida" onclick="eliminarSalida(${sal.id_salida}, '${sal.cod_producto}', ${sal.cantidad})"><i class="bi bi-trash"></i></button>
                     </td>
                 </tr>
             `
@@ -196,9 +202,13 @@ const getSalidas = async() => {
     }
 }
 
-const eliminarSalida = async(id) => {
+const eliminarSalida = async(id, cod_producto, cantidad) => {
     try {
-        await axios.delete('http://localhost:3000/salidas/delete/' + id)
+        res = await axios.post('http://localhost:3000/salidas/delete/' + id, {
+            cod_producto: cod_producto,
+            cantidad: cantidad
+        })
+        alert(res.data)
         getSalidas()
     } catch (error) {
         alert(error)
@@ -210,16 +220,21 @@ btnGuardarSalida.addEventListener('click', async() => {
         alert('Debe ingresar fecha y cantidad.')
     } else {
         try {
-            res = axios.post('http://localhost:3000/salidas', {
+            res = await axios.post('http://localhost:3000/salidas', {
                 fecha: txtFechaSalida.value,
                 cod_producto: cboProductoSalida.value,
                 cantidad: +txtCantidadSalida.value 
             })
-            alert('Se registró con exito.')
-            getSalidas()
-            formularioSalida.reset()
-            formularioSalida.style.display = 'none'
-            btnNuevaSalida.disabled = false
+            console.log(res.data)
+            if(res.data.id === 0){
+                alert(res.data.mensaje)
+            } else {
+                alert('Se registró con exito.')
+                getSalidas()
+                formularioSalida.reset()
+                formularioSalida.style.display = 'none'
+                btnNuevaSalida.disabled = false
+            }
         } catch (error) {
             alert(error)
         }

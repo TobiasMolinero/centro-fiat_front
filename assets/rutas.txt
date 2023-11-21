@@ -4,3 +4,4 @@ lista de todas las salidas: http://localhost:3000/salidas
 para llenar combobox: http://localhost:3000/productos/cargarselect
 
 para eliminar un ingreso: http://localhost:3000/ingresos/delete/
+para eliminar una salida: http://localhost:3000/salidas/delete/
