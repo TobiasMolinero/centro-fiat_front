@@ -1,0 +1,58 @@
+.grid-inicio{
+    display: grid;
+    margin: 20px 100px;
+    grid-template-columns: 40% 60%;
+    height: 400px;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    padding: 0 0 0 150px;
+}
+
+.card{
+    background: var(--color-nav);
+    height: 250px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 10px 1px #141414;
+}
+
+.card h4{
+    text-align: center;
+}
+
+.icono-card{
+    width: 80px;
+}
+
+.link-card{
+    color: #f2f2f2;
+    background-color: rgb(128, 128, 128);
+    padding: 5px 25px;
+    text-decoration: none;
+}
+
+.link-card:hover{
+    background-color: rgb(63, 63, 63);
+}
+
+.link-card:active{
+    background-color: rgb(128, 128, 128);
+}

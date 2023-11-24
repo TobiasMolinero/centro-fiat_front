@@ -9,8 +9,14 @@
 
     <!-- CSS HEADER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../../../header.css">
-    
+    <link rel="stylesheet" href="../../header.css">
+
+    <!-- CSS INICIO -->
+    <link rel="stylesheet" href="./inicio.css">
+
+    <!-- ICONO -->
+    <link rel="icon" href="../login/imagenes/logo centro fiat.png.jpeg">
+
     <!-- SCRIPT HEADER -->
     <script src="../../../header.js" defer></script>
 </head>
@@ -23,6 +29,7 @@
         <ul>
             <li><a href="inicio.html">Inicio</a></li>
             <li id="item-desplegable-inventario" class="desplegable">Productos<i class="bi bi-caret-down-fill"></i></li>
+            <li class="cerrar-sesion"><a href="../login/login.html"><i class="bi bi-box-arrow-left"></i>Cerrar sesión</a></li>
         </ul>
     </nav>
     <div class="menu-desplegable-inventario">
@@ -31,6 +38,20 @@
             <li><a href="../productos/stock/stock.html">Lista de Stock</a></li>
         </ul>
     </div>
-    <h1>Inicio</h1>
+    <section class="grid-inicio">
+        <h1 class="titulo">CENTRO FIAT - SISTEMA DE GESTION DE STOCK</h1>
+        <div class="cards">
+            <div class="card">
+                <img class="icono-card" src="./imagenes/stock.png" alt="">
+                <h4>Productos</h4>
+                <a class="link-card" href="../productos/stock/stock.html">Ver</a>
+            </div>
+            <div class="card">
+                <img class="icono-card" src="./imagenes/intercambio.png" alt="">
+                <h4>Ingresos/Salidas de Mercadería</h4>
+                <a class="link-card" href="../productos/ingresos-salidas/ing_sal.html">Ver</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
