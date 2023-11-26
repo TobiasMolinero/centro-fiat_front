@@ -1,0 +1,138 @@
+.container{
+    padding: 10px 20px;
+}
+
+.container h1{
+    margin-top: 15px;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin-top: 20px;
+}
+
+.container-table{
+    height: 350px;
+    overflow: auto;
+}
+
+.table-prod{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}   
+
+.table-prod thead{
+    background-color: rgb(3, 3, 83);
+    color: #ddd;
+    border-bottom: 2px solid black;
+    position: sticky;
+    top: 0;
+}
+
+
+.table-prod thead th{
+    padding: 5px 5px;
+}
+
+.table-prod tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.table-prod tbody td{
+    padding: 10px 5px;
+}
+
+#btnSelectProd, #btnDeleteProd{
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.container-button{
+    padding: 0 15px;
+}
+
+.btn-add-product{
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+/* MODALES */
+
+.modal{
+    position: absolute;
+    top: 0;
+    background: rgba(65, 65, 65, 0.534);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-modal{
+    background: #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-close-modal{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    align-self: end;
+}
+
+.btn-close-modal:hover{
+    color: #a7a7a7;
+}
+
+.form-modal form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-modal form input{
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.form-modal-buttons{
+    margin: 20px 0 5px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-button{
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#btnAddProduct, #btnEditProduct{
+    background: #353535;
+    color: #ddd;
+}
+
+#btnAddProd, #btnEditProduct:hover{
+    background: #4e4e4e;
+    color: #c0c0c0;
+}
+
+.modal-add-product{
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal-edit-product{
+    opacity: 0;
+    z-index: -1;
+}

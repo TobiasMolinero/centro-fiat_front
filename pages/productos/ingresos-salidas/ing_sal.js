@@ -60,7 +60,7 @@ btnNuevaSalida.addEventListener('click', () => {
     cargarComboBoxSalida()
 })
 
-btnGuardarIngreso.addEventListener('click', async() => {
+btnGuardarIngreso.addEventListener('click', () => {
     if(txtFechaIngreso.value == "" || txtCantidadIngreso.value == ""){
         alert('Debe ingresar fecha y cantidad.')
     } else {
